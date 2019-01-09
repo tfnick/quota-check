@@ -55,3 +55,32 @@ curl -X POST \
 curl -X GET http://127.0.0.1:8001/quotas/:username_or_custom_id/
    
 ```
+
+### 安装
+
+shell
+```
+/bin/install.sh
+
+```
+plugin will location in /usr/local/share/lua/5.1/kong/plugins
+
+enable plugin in /etc/kong/kong.conf
+
+```
+
+```
+execute migrations
+
+```json
+cd /etc/kong/kong.conf
+kong  migrations up -c kong.conf
+```
+
+restart kong ,add --vv if debug
+
+```json
+
+kong restart
+
+```

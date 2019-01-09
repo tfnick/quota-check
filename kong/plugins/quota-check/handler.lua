@@ -6,7 +6,7 @@ local constants = require "kong.constants"
 local QuotaCheckHandler = BasePlugin:extend()
 
 -- the number is more big and the priority is more high
-QuotaCheckHandler.PRIORITY = 9990
+QuotaCheckHandler.PRIORITY = 9980
 
 
 function QuotaCheckHandler:new()
