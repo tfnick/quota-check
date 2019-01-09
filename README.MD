@@ -43,10 +43,16 @@ curl -X POST \
 > 更新账户状态
 
 ```
-curl -X POST \
-    --data "status=normal" \
+curl -X PATCH \
+    --data "status=offline" \
    http://127.0.0.1:8001/quotas/:username_or_custom_id/ \
-   
+  
+```
+
+返回值
+
+```json
+{"custom_id":"111","created_at":1547038327000,"id":"dd96df74-6e79-4e9b-a611-294b253fa4f7","status":"normal","consumer_id":"be3517b2-8406-4dd5-9337-b8c89b30c72e"}
 ```
 
 > 查看账户状态
@@ -54,6 +60,12 @@ curl -X POST \
 ```
 curl -X GET http://127.0.0.1:8001/quotas/:username_or_custom_id/
    
+```
+
+返回值
+
+```json
+{"total":1,"data":[{"custom_id":"111","created_at":1547038327000,"id":"dd96df74-6e79-4e9b-a611-294b253fa4f7","status":"normal","consumer_id":"be3517b2-8406-4dd5-9337-b8c89b30c72e"}]}
 ```
 
 ### 安装
@@ -72,18 +84,16 @@ enable plugin in /etc/kong/kong.conf
 ```
 execute migrations
 
-```json
+```
 cd /etc/kong/kong.conf
 kong  migrations up -c kong.conf
 ```
 
 restart kong ,add --vv if debug
 
-```json
+```
 
 kong restart
 
 ```
-
-
 
