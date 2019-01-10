@@ -37,11 +37,9 @@ return {
             if self.quota == nil then
                 -- create
                 local res = crud.post(self.params, dao_factory.quota)
-                ngx.log(ngx.NOTICE,"create suceess ? ",res)
             else
                 -- update
                 local res = crud.patch(self.params, dao_factory.quota, self.quota)
-                ngx.log(ngx.NOTICE,"create suceess ? ",res)
             end
         end
     }

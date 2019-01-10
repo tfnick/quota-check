@@ -18,7 +18,7 @@ jwt-header-rewrite(global) -> jwt | sign-verify(route) -> quota-check(route) -> 
 
 - 本插件创建quota表
 
-### 新接口改为3个
+### 新接口改为4个
 
 > 创建客户
 
@@ -43,7 +43,7 @@ curl -X POST \
 > 更新账户状态
 
 ```
-curl -X PATCH \
+curl -X POST \
     --data "status=offline" \
    http://127.0.0.1:8001/quotas/:custom_id/ \
   
@@ -78,6 +78,25 @@ curl -X GET http://127.0.0.1:8001/quotas/:custom_id/
 {"message":"Not Found"}
 ```
 
+> 查看缓存状态
+
+```
+curl -X GET http://127.0.0.1:8001/cache/quota.:custom_id/
+
+```
+
+案例
+
+```
+curl -X GET http://127.0.0.1:8001/cache/quota.111
+```
+
+返回
+
+```json
+{"message":"Not found"}
+```
+
 ### 安装
 
 shell
@@ -107,3 +126,5 @@ kong restart
 
 ```
 
+
+### 缓存有效期 - 改为一天
