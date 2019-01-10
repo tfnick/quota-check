@@ -5,7 +5,7 @@ local cache = kong.cache
 local QuotaCheckHandler = BasePlugin:extend()
 
 -- the number is more big and the priority is more high
-QuotaCheckHandler.PRIORITY = 9970
+QuotaCheckHandler.PRIORITY = 10
 
 
 local function load_entity_custom_id(custom_id)

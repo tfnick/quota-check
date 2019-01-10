@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b620d107-7952-4976-b0a4-e132ab850276" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kong/plugins/quota-check/api.lua" beforeDir="false" afterPath="$PROJECT_DIR$/kong/plugins/quota-check/api.lua" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kong/plugins/quota-check/handler.lua" beforeDir="false" afterPath="$PROJECT_DIR$/kong/plugins/quota-check/handler.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kong/plugins/quota-check/hooks.lua" beforeDir="false" afterPath="$PROJECT_DIR$/kong/plugins/quota-check/hooks.lua" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +41,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="MD" value="865" />
-          <entry key="lua" value="1245" />
+          <entry key="lua" value="1247" />
           <entry key="rockspec" value="13" />
           <entry key="sh" value="12" />
         </counts>
@@ -54,7 +52,7 @@
           <entry key="JSON" value="5" />
           <entry key="Markdown" value="860" />
           <entry key="PLAIN_TEXT" value="13" />
-          <entry key="lua" value="1245" />
+          <entry key="lua" value="1247" />
         </counts>
       </usages-collector>
     </session>
@@ -76,7 +74,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kong/plugins/quota-check/daos.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-262">
+            <state relative-caret-position="-213">
               <caret line="10" column="42" lean-forward="true" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
             </state>
           </provider>
@@ -103,8 +101,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kong/plugins/quota-check/handler.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="32" column="32" lean-forward="true" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+            <state relative-caret-position="133">
+              <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -205,7 +203,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547093396129" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547094421763" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -242,12 +240,12 @@
       <updated>1547004947780</updated>
       <workItem from="1547004949498" duration="2380000" />
       <workItem from="1547011125710" duration="10000" />
-      <workItem from="1547031350652" duration="17799000" />
+      <workItem from="1547031350652" duration="18490000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20189000" />
+    <option name="totallyTimeSpent" value="20880000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -270,7 +268,7 @@
       <window_info anchor="bottom" id="LuaCheck" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2594417" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3316913" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -367,10 +365,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kong/plugins/quota-check/daos.lua">
+    <entry file="file://$PROJECT_DIR$/kong/plugins/quota-check/hooks.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-262">
-          <caret line="10" column="42" lean-forward="true" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+        <state relative-caret-position="190">
+          <caret line="16" column="46" lean-forward="true" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -381,17 +379,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kong/plugins/quota-check/hooks.lua">
+    <entry file="file://$PROJECT_DIR$/kong/plugins/quota-check/daos.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="16" column="46" lean-forward="true" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+        <state relative-caret-position="-213">
+          <caret line="10" column="42" lean-forward="true" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kong/plugins/quota-check/handler.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="32" column="32" lean-forward="true" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+        <state relative-caret-position="133">
+          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
         </state>
       </provider>
     </entry>
