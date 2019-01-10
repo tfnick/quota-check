@@ -36,7 +36,7 @@ curl -X POST \
 curl -X POST \
     --data "key=111111111111111111111111" \
     --data "secret=2222222222222222222222" \
-   http://127.0.0.1:8001/consumers/:username_or_custom_id/jwt/ \
+   http://127.0.0.1:8001/consumers/:custom_id/jwt/ \
    
 ```
 
@@ -45,7 +45,7 @@ curl -X POST \
 ```
 curl -X PATCH \
     --data "status=offline" \
-   http://127.0.0.1:8001/quotas/:username_or_custom_id/ \
+   http://127.0.0.1:8001/quotas/:custom_id/ \
   
 ```
 
@@ -55,10 +55,15 @@ curl -X PATCH \
 {"custom_id":"111","created_at":1547038327000,"id":"dd96df74-6e79-4e9b-a611-294b253fa4f7","status":"normal","consumer_id":"be3517b2-8406-4dd5-9337-b8c89b30c72e"}
 ```
 
+错误返回
+```json
+{"message":"Not Found"}
+```
+
 > 查看账户状态
 
 ```
-curl -X GET http://127.0.0.1:8001/quotas/:username_or_custom_id/
+curl -X GET http://127.0.0.1:8001/quotas/:custom_id/
    
 ```
 
@@ -66,6 +71,11 @@ curl -X GET http://127.0.0.1:8001/quotas/:username_or_custom_id/
 
 ```json
 {"total":1,"data":[{"custom_id":"111","created_at":1547038327000,"id":"dd96df74-6e79-4e9b-a611-294b253fa4f7","status":"normal","consumer_id":"be3517b2-8406-4dd5-9337-b8c89b30c72e"}]}
+```
+
+错误返回
+```json
+{"message":"Not Found"}
 ```
 
 ### 安装
@@ -89,7 +99,7 @@ cd /etc/kong/kong.conf
 kong  migrations up -c kong.conf
 ```
 
-restart kong ,add --vv if debug
+restart kong ,add --vv option if debug
 
 ```
 
