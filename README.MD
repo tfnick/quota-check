@@ -24,7 +24,7 @@ jwt-header-rewrite(global) -> jwt | sign-verify(route) -> quota-check(route) -> 
 
 ```
 curl -X POST \
-    --data "username=own" \
+    --data "username=grdata" \
     --data "custom_id=1"
    http://127.0.0.1:8001/consumers/ \
 
@@ -36,7 +36,7 @@ curl -X POST \
 curl -X POST \
     --data "key=111111111111111111111111" \
     --data "secret=2222222222222222222222" \
-   http://127.0.0.1:8001/consumers/:custom_id/jwt/ \
+   http://127.0.0.1:8001/consumers/:username/jwt/ \
    
 ```
 
@@ -45,7 +45,7 @@ curl -X POST \
 ```
 curl -X POST \
     --data "status=offline" \
-   http://127.0.0.1:8001/quotas/:custom_id/ \
+   http://127.0.0.1:8001/quotas/:username/ \
   
 ```
 
@@ -63,7 +63,7 @@ curl -X POST \
 > 查看账户状态
 
 ```
-curl -X GET http://127.0.0.1:8001/quotas/:custom_id/
+curl -X GET http://127.0.0.1:8001/quotas/:username/
    
 ```
 

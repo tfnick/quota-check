@@ -1,6 +1,5 @@
 local BasePlugin = require "kong.plugins.base_plugin"
 local responses = require "kong.tools.responses"
-local cache = kong.cache
 
 local QuotaCheckHandler = BasePlugin:extend()
 
@@ -37,14 +36,20 @@ function QuotaCheckHandler:access(conf)
         return responses.send_HTTP_FORBIDDEN("Invalid custom_id for access")
     end
 
+    if conf.open_debug == 1 then
+        ngx.log(ngx.NOTICE," qutoa custom_id is ",custom_id_in_header)
+    end
     -- load quota status form cache ,cache expired time is 24h,cluster node update in 5 seconds
     -- this command will load data from M1 -> M2 - M3 level cache if parent level not hit the cache
-    local quota = cache:get("quota."..custom_id_in_header,nil,load_entity_custom_id,custom_id_in_header)
+    local quota = kong.cache:get("quota."..custom_id_in_header,nil,load_entity_custom_id,custom_id_in_header)
 
     if not quota or quota == nil then
         return responses.send_HTTP_FORBIDDEN("Unrecharged account")
     end
 
+    if conf.open_debug == 1 then
+        ngx.log(ngx.NOTICE," debug cache info "," custom_id "..custom_id_in_header.." status is "..quota.status)
+    end
     if quota.status == "offline" then
         return responses.send_HTTP_FORBIDDEN("Insufficient account balance")
     else
