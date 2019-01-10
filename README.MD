@@ -81,14 +81,14 @@ curl -X GET http://127.0.0.1:8001/quotas/:username/
 > 查看缓存状态
 
 ```
-curl -X GET http://127.0.0.1:8001/cache/quota.:custom_id/
+curl -X GET http://127.0.0.1:8001/cache/quota:<custom_id>::::/
 
 ```
 
 案例
 
 ```
-curl -X GET http://127.0.0.1:8001/cache/quota.111
+curl -X GET http://127.0.0.1:8001/cache/quota:63::::
 ```
 
 返回
@@ -133,5 +133,6 @@ kong restart
 db_update_frequency = 5
 db_cache_ttl = 0
 db_update_propagation = 0
+
 ```
 
