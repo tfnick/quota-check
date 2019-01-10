@@ -91,7 +91,13 @@ curl -X GET http://127.0.0.1:8001/cache/quota:<custom_id>::::/
 curl -X GET http://127.0.0.1:8001/cache/quota:63::::
 ```
 
-返回
+返回值
+
+```json
+{"custom_id":"63","created_at":1547098623000,"id":"3e936663-c1d2-4fd6-919f-07e2db6548c2","status":"normal","consumer_id":"6a71772e-07f1-4693-a0c0-f2c3e8796a9f"}
+```
+
+错误返回
 
 ```json
 {"message":"Not found"}
@@ -130,6 +136,7 @@ kong restart
 ### 缓存配置
 /etc/kong/kong.conf
 ```
+
 db_update_frequency = 5
 db_cache_ttl = 0
 db_update_propagation = 0
