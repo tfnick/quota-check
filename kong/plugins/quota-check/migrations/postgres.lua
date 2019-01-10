@@ -2,7 +2,7 @@ local plugin_config_iterator = require("kong.dao.migrations.helpers").plugin_con
 
 return {
   {
-    name = "2019-01-10-quota",
+    name = "2015-06-09-quota",
     up = [[
       CREATE TABLE IF NOT EXISTS quota(
         id uuid,
