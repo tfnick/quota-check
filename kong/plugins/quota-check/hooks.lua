@@ -5,19 +5,19 @@
 ---
 
 local events = require "kong.core.events"
-local cache = require "kong.tools.database_cache"
+local cache = kong.cache
 
 local function invalidate_on_update(message_t)
     if message_t.collection == "quota" then
         -- delete cache when update quota
-        cache.delete("quota."..message_t.entity.custom_id)
+        cache:invalidate("quota."..message_t.entity.custom_id)
     end
 end
 
 local function invalidate_on_create(message_t)
     if message_t.collection == "quota" then
         -- create cache when create quota
-        cache.set("quota."..message_t.entity.custom_id,message_t.entity.status)
+        cache:invalidate("quota."..message_t.entity.custom_id)
     end
 end
 

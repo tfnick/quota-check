@@ -36,10 +36,10 @@ return {
         POST = function(self, dao_factory, helpers)
             if self.quota == nil then
                 -- create
-                local res = crud.post(self.params, dao_factory.quota)
+                crud.post(self.params, dao_factory.quota)
             else
                 -- update
-                local res = crud.patch(self.params, dao_factory.quota, self.quota)
+                crud.patch(self.params, dao_factory.quota, self.quota)
             end
         end
     }
