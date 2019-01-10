@@ -127,4 +127,11 @@ kong restart
 ```
 
 
-### 缓存有效期 - 改为一天
+### 缓存配置
+/etc/kong/kong.conf
+```
+db_update_frequency = 5
+db_cache_ttl = 0
+db_update_propagation = 0
+```
+

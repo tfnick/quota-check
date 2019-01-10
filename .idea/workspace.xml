@@ -5,6 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kong/plugins/quota-check/handler.lua" beforeDir="false" afterPath="$PROJECT_DIR$/kong/plugins/quota-check/handler.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kong/plugins/quota-check/hooks.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quota-check-1.0-0.rockspec" beforeDir="false" afterPath="$PROJECT_DIR$/quota-check-1.0-0.rockspec" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +29,7 @@
         <counts>
           <entry key="MD" value="2" />
           <entry key="lua" value="23" />
-          <entry key="rockspec" value="2" />
+          <entry key="rockspec" value="3" />
           <entry key="sh" value="1" />
         </counts>
       </usages-collector>
@@ -35,14 +37,14 @@
         <counts>
           <entry key="Bash" value="1" />
           <entry key="Markdown" value="2" />
-          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="PLAIN_TEXT" value="3" />
           <entry key="lua" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="MD" value="893" />
-          <entry key="lua" value="1310" />
+          <entry key="MD" value="953" />
+          <entry key="lua" value="1321" />
           <entry key="rockspec" value="13" />
           <entry key="sh" value="12" />
         </counts>
@@ -51,9 +53,9 @@
         <counts>
           <entry key="Bash" value="12" />
           <entry key="JSON" value="5" />
-          <entry key="Markdown" value="888" />
+          <entry key="Markdown" value="948" />
           <entry key="PLAIN_TEXT" value="13" />
-          <entry key="lua" value="1310" />
+          <entry key="lua" value="1321" />
         </counts>
       </usages-collector>
     </session>
@@ -64,10 +66,19 @@
         <entry file="file://$PROJECT_DIR$/README.MD">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-133">
-                <caret line="90" column="49" selection-start-line="90" selection-start-column="46" selection-end-line="90" selection-end-column="49" />
+              <first_editor relative-caret-position="171">
+                <caret line="90" column="9" selection-start-line="90" selection-end-line="90" selection-end-column="49" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quota-check-1.0-0.rockspec">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="155">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -81,20 +92,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kong/plugins/quota-check/handler.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="41" column="95" lean-forward="true" selection-start-line="41" selection-start-column="95" selection-end-line="41" selection-end-column="95" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/kong/plugins/quota-check/hooks.lua">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="243">
+              <caret line="52" column="53" selection-start-line="52" selection-start-column="53" selection-end-line="52" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -129,11 +131,11 @@
         <option value="$PROJECT_DIR$/kong/plugins/quota-check/daos.lua" />
         <option value="$PROJECT_DIR$/bin/install.sh" />
         <option value="$PROJECT_DIR$/kong/plugins/quota-check/migrations/hooks.lua" />
-        <option value="$PROJECT_DIR$/quota-check-1.0-0.rockspec" />
         <option value="$PROJECT_DIR$/kong/plugins/quota-check/api.lua" />
-        <option value="$PROJECT_DIR$/kong/plugins/quota-check/handler.lua" />
-        <option value="$PROJECT_DIR$/README.MD" />
         <option value="$PROJECT_DIR$/kong/plugins/quota-check/hooks.lua" />
+        <option value="$PROJECT_DIR$/README.MD" />
+        <option value="$PROJECT_DIR$/quota-check-1.0-0.rockspec" />
+        <option value="$PROJECT_DIR$/kong/plugins/quota-check/handler.lua" />
       </list>
     </option>
   </component>
@@ -195,7 +197,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547099968694" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547101670365" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -232,12 +234,12 @@
       <updated>1547004947780</updated>
       <workItem from="1547004949498" duration="2380000" />
       <workItem from="1547011125710" duration="10000" />
-      <workItem from="1547031350652" duration="21615000" />
+      <workItem from="1547031350652" duration="23296000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24005000" />
+    <option name="totallyTimeSpent" value="25686000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -309,13 +311,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quota-check-1.0-0.rockspec">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="18" column="72" selection-start-line="18" selection-start-column="72" selection-end-line="18" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kong/plugins/quota-check/daos.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-11">
@@ -330,27 +325,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/kong/plugins/quota-check/hooks.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.MD">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-133">
-            <caret line="90" column="49" selection-start-line="90" selection-start-column="46" selection-end-line="90" selection-end-column="49" />
+          <first_editor relative-caret-position="171">
+            <caret line="90" column="9" selection-start-line="90" selection-end-line="90" selection-end-column="49" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kong/plugins/quota-check/handler.lua">
+    <entry file="file://$PROJECT_DIR$/quota-check-1.0-0.rockspec">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="41" column="95" lean-forward="true" selection-start-line="41" selection-start-column="95" selection-end-line="41" selection-end-column="95" />
+        <state relative-caret-position="155">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kong/plugins/quota-check/hooks.lua">
+    <entry file="file://$PROJECT_DIR$/kong/plugins/quota-check/handler.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="243">
+          <caret line="52" column="53" selection-start-line="52" selection-start-column="53" selection-end-line="52" selection-end-column="53" />
         </state>
       </provider>
     </entry>

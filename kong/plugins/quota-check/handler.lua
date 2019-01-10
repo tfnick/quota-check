@@ -41,14 +41,16 @@ function QuotaCheckHandler:access(conf)
     end
     -- load quota status form cache ,cache expired time is 24h,cluster node update in 5 seconds
     -- this command will load data from M1 -> M2 - M3 level cache if parent level not hit the cache
-    local quota = kong.cache:get("quota."..custom_id_in_header,nil,load_entity_custom_id,custom_id_in_header)
+    local cache_key = kong.dao.quota:cache_key(custom_id_in_header)
+
+    local quota = kong.cache:get(cache_key,nil,load_entity_custom_id,custom_id_in_header)
 
     if not quota or quota == nil then
         return responses.send_HTTP_FORBIDDEN("Unrecharged account")
     end
 
     if conf.open_debug == 1 then
-        ngx.log(ngx.NOTICE," debug cache info "," custom_id "..custom_id_in_header.." status is "..quota.status)
+        ngx.log(ngx.NOTICE," debug cache "..cache_key," custom_id "..custom_id_in_header.." status is "..quota.status)
     end
     if quota.status == "offline" then
         return responses.send_HTTP_FORBIDDEN("Insufficient account balance")
