@@ -1,7 +1,5 @@
 package = "quota-check"
 version = "1.0-0"
-local pluginName = "quota-check"
-
 source = {
   url = "git://github.com/tfnick/quota-check.git",
 }
